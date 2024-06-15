@@ -1,42 +1,49 @@
 // src/components/Navbar/Navbar.tsx
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Link to="/">Wells Fargo </Link>
+        <Link to="/">
+          <img src="https://www17.wellsfargomedia.com/assets/images/rwd/wf_logo_220x23.png" alt="Wells Fargo Logo" className={styles.logoImage} />
+        </Link>
       </div>
-      <div className={styles.hamburger} onClick={toggleSidebar}>
-        ☰
-      </div>
-      <ul className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-        <li className={styles.closeBtn} onClick={toggleSidebar}>
-          &times;
+      <button className={styles.hamburger} onClick={toggleMobileMenu}>
+        {isMobileMenuOpen ? <span className={styles.closeIcon}>&times;</span> : <span>&#9776;</span>}
+      </button>
+      <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.open : ''}`}>
+        <li>
+          <Link to="/" className={styles.navLink} onClick={toggleMobileMenu}>Home</Link>
         </li>
         <li>
-          <Link to="/" className={styles.navLink} onClick={toggleSidebar}>Home</Link>
+          <Link to="/components" className={styles.navLink} onClick={toggleMobileMenu}>Components</Link>
         </li>
         <li>
-          <Link to="/components" className={styles.navLink} onClick={toggleSidebar}>Components</Link>
+          <Link to="/utilities" className={styles.navLink} onClick={toggleMobileMenu}>Utilities</Link>
         </li>
         <li>
-          <Link to="/utilities" className={styles.navLink} onClick={toggleSidebar}>Utilities</Link>
+          <Link to="/documentation" className={styles.navLink} onClick={toggleMobileMenu}>Documentation</Link>
         </li>
         <li>
-          <Link to="/documentation" className={styles.navLink} onClick={toggleSidebar}>Documentation</Link>
+          <Link to="/examples" className={styles.navLink} onClick={toggleMobileMenu}>Examples</Link>
         </li>
-        <li>
-          <Link to="/examples" className={styles.navLink} onClick={toggleSidebar}>Examples</Link>
+        <li className={styles.userActions}>
+          {!isLoggedIn ? (
+            <Link to="/signup" className={styles.navLink} onClick={toggleMobileMenu}>Sign Up</Link>
+          ) : (
+            <FaUserCircle className={styles.userIcon} />
+          )}
         </li>
       </ul>
     </nav>

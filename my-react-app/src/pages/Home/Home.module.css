@@ -1,0 +1,291 @@
+/* src/pages/Home/Home.module.css */
+
+.home {
+    padding: 2rem;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .header p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .featureCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .featureCard .icon {
+    margin-bottom: 1rem;
+  }
+  
+  .featureCard h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .featureCard p {
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .featureCard a {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: 500;
+  }
+  
+  .featureCard a:hover {
+    text-decoration: underline;
+  }
+  
+  .getStarted {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .getStartedIcon {
+    margin-bottom: 1rem;
+  }
+  
+  .getStartedIcon img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .getStarted h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .getStarted p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .getStarted a {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: 500;
+  }
+  
+  .getStarted a:hover {
+    text-decoration: underline;
+  }
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+  
+    .header p {
+      font-size: 1rem;
+    }
+  
+    .featureCard {
+      padding: 1rem;
+    }
+  
+    .featureCard h3 {
+      font-size: 1.1rem;
+    }
+  
+    .featureCard p {
+      font-size: 0.9rem;
+    }
+  
+    .getStarted h2 {
+      font-size: 1.8rem;
+    }
+  
+    .getStarted p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media only screen and (min-width: 321px) {
+    .header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .header p {
+      font-size: 1.1rem;
+    }
+  
+    .featureCard {
+      padding: 1.25rem;
+    }
+  
+    .featureCard h3 {
+      font-size: 1.2rem;
+    }
+  
+    .featureCard p {
+      font-size: 1rem;
+    }
+  
+    .getStarted h2 {
+      font-size: 2rem;
+    }
+  
+    .getStarted p {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .header p {
+      font-size: 0.9rem;
+    }
+  
+    .featureCard {
+      padding: 0.75rem;
+    }
+  
+    .featureCard h3 {
+      font-size: 1rem;
+    }
+  
+    .featureCard p {
+      font-size: 0.8rem;
+    }
+  
+    .getStarted h2 {
+      font-size: 1.6rem;
+    }
+  
+    .getStarted p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .header p {
+      font-size: 1.25rem;
+    }
+  
+    .featureCard {
+      padding: 1.5rem;
+    }
+  
+    .featureCard h3 {
+      font-size: 1.25rem;
+    }
+  
+    .featureCard p {
+      font-size: 1rem;
+    }
+  
+    .getStarted h2 {
+      font-size: 2.2rem;
+    }
+  
+    .getStarted p {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1224px) {
+    .header h1 {
+      font-size: 2.75rem;
+    }
+  
+    .header p {
+      font-size: 1.3rem;
+    }
+  
+    .featureCard {
+      padding: 1.75rem;
+    }
+  
+    .featureCard h3 {
+      font-size: 1.3rem;
+    }
+  
+    .featureCard p {
+      font-size: 1.1rem;
+    }
+  
+    .getStarted h2 {
+      font-size: 2.5rem;
+    }
+  
+    .getStarted p {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1824px) {
+    .header h1 {
+      font-size: 3rem;
+    }
+  
+    .header p {
+      font-size: 1.4rem;
+    }
+  
+    .featureCard {
+      padding: 2rem;
+    }
+  
+    .featureCard h3 {
+      font-size: 1.4rem;
+    }
+  
+    .featureCard p {
+      font-size: 1.2rem;
+    }
+  
+    .getStarted h2 {
+      font-size: 2.8rem;
+    }
+  
+    .getStarted p {
+      font-size: 1.4rem;
+    }
+  }
+  
