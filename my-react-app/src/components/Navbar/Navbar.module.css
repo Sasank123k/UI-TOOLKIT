@@ -1,0 +1,220 @@
+/* src/components/Navbar/Navbar.module.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #d71e28; /* Wells Fargo red */
+  border-bottom: 4px solid #ffcd41; /* Yellow border */
+  color: #fff;
+  border-top-left-radius: 10px; /* Rounded top left corner */
+  border-top-right-radius: 10px; /* Rounded top right corner */
+  position: relative;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  color: #ffcd41; /* Yellow on hover */
+}
+
+.closeBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #d71e28;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navLinks.open {
+    transform: translateX(0);
+  }
+
+  .navLink {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem; /* Responsive font size */
+  }
+
+  .closeBtn {
+    display: block;
+    font-size: 2rem;
+    color: #ffcd41; /* Yellow color */
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 1rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .logo a {
+    font-size: 1.2rem;
+  }
+  .hamburger {
+    font-size: 1.5rem;
+  }
+  .navLink {
+    font-size: 1rem;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  .navbar {
+    padding: 0.5rem 1.5rem;
+  }
+  .logo a {
+    font-size: 1.3rem;
+  }
+  .hamburger {
+    font-size: 1.8rem;
+  }
+  .navLink {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  .navbar {
+    padding: 0.5rem 0.8rem;
+  }
+  .logo a {
+    font-size: 1.1rem;
+  }
+  .hamburger {
+    font-size: 1.5rem;
+  }
+  .navLink {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .hamburger {
+    font-size: 2rem;
+  }
+  .navLink {
+    font-size: 1.3rem;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .navbar {
+    padding: 1rem 2.5rem;
+  }
+  .logo a {
+    font-size: 1.6rem;
+  }
+  .hamburger {
+    font-size: 2.2rem;
+  }
+  .navLink {
+    font-size: 1.4rem;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .logo a {
+    font-size: 1.4rem;
+  }
+  .hamburger {
+    font-size: 1.8rem;
+  }
+  .navLink {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .navbar {
+    padding: 1.5rem 3rem;
+  }
+  .logo a {
+    font-size: 1.8rem;
+  }
+  .hamburger {
+    font-size: 2.5rem;
+  }
+  .navLink {
+    font-size: 1.6rem;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  .navbar {
+    padding: 2rem 4rem;
+  }
+  .logo a {
+    font-size: 2rem;
+  }
+  .hamburger {
+    font-size: 3rem;
+  }
+  .navLink {
+    font-size: 1.8rem;
+  }
+}
