@@ -1,0 +1,14 @@
+npm init vite@latest ui-toolkit --template react-ts
+cd ui-toolkit
+
+npm install styled-components @types/styled-components react-icons
+npm install react-router-dom @types/react-router-dom
+npm install @mui/material @emotion/react @emotion/styled
+
+
+storybook
+
+npx sb init --builder vite
+
+npm run storybook
+
