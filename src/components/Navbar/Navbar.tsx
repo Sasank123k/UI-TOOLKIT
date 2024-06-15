@@ -11,6 +11,9 @@ const Navbar: React.FC = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
+  const fight = () => {
+    setIsLoggedIn(!isLoggedIn);
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -19,7 +22,7 @@ const Navbar: React.FC = () => {
           <img src="https://www17.wellsfargomedia.com/assets/images/rwd/wf_logo_220x23.png" alt="Wells Fargo Logo" className={styles.logoImage} />
         </Link>
       </div>
-      <button className={styles.hamburger} onClick={toggleMobileMenu}>
+      <button className={styles.hamburger} onClick={fight}>
         {isMobileMenuOpen ? <span className={styles.closeIcon}>&times;</span> : <span>&#9776;</span>}
       </button>
       <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.open : ''}`}>
@@ -44,6 +47,7 @@ const Navbar: React.FC = () => {
           ) : (
             <FaUserCircle className={styles.userIcon} />
           )}
+          
         </li>
       </ul>
     </nav>
