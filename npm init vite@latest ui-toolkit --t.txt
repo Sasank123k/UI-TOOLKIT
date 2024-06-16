@@ -16,3 +16,13 @@ npx sb init --builder vite
 
 npm run storybook
 
+
+backend
+
+python --version
+python -m venv venv
+pip install Flask Flask-Cors Flask-Bcrypt Flask-JWT-Extended
+pip freeze > requirements.txt
+python app.py
+npm install axios
+
